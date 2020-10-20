@@ -349,7 +349,7 @@ const useResizeHandler = (
   };
 }
 
-const SketchPad: React.FC<SketchPadProps> = (props, ref) => {
+const SketchPad: React.ForwardRefRenderFunction<any, SketchPadProps> = (props, ref) => {
   const { currentTool, setCurrentTool, userId, currentToolOption, onScaleChange, scale, operations, onChange } = props;
 
   const refCanvas = useRef<HTMLCanvasElement>(null);
@@ -531,7 +531,7 @@ const SketchPad: React.FC<SketchPadProps> = (props, ref) => {
     if (!refCanvas.current) return null;
 
     const [x, y] = mapClientToCanvas(e, refCanvas.current, viewMatrix);
-
+    console.info('mouse down');
     switch (currentTool) {
       case Tool.Select:
         onSelectMouseDown(e, x, y, scale, operationListState, viewMatrix, setSelectedOperation);

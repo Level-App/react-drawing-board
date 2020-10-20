@@ -1,13 +1,16 @@
 {
-  "name": "react-drawing-board",
+  "name": "level-drawing-board",
   "version": "0.1.1",
-  "description": "",
+  "description": "Browser drawing board created with canvas and React.",
   "main": "lib/index.js",
   "authors": {
     "name": "",
     "email": ""
   },
-  "repository": "https://github.com/dilidili/react-drawing-board",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilidili/react-drawing-board.git"
+  },
   "files": [
     "src",
     "lib"
@@ -34,5 +37,10 @@
     "umi-plugin-react": "^1.14.8",
     "umi-types": "^0.3.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dilidili/react-drawing-board/issues"
+  },
+  "homepage": "https://github.com/dilidili/react-drawing-board#readme",
+  "author": ""
 }
